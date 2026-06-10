@@ -1,0 +1,35 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Contacto (JSP)</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <span class="badge">Backend Java (JSP)</span>
+        <h2>Registro de Contactos</h2>
+        <p class="subtitle">Complete los campos a continuación para registrar un nuevo contacto en la sesión de Tomcat.</p>
+        
+        <form action="procesar.jsp" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required 
+                       pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,50}$" 
+                       title="El nombre debe tener entre 2 y 50 caracteres y contener solo letras y espacios.">
+            </div>
+            
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ej. juan@domain.com" required>
+            </div>
+            
+            <button type="submit" class="btn">
+                Registrar Contacto (JSP)
+            </button>
+        </form>
+    </div>
+</body>
+</html>
